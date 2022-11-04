@@ -15,9 +15,8 @@ public class JokeController {
         this.service = service;
     }
 
-    @GetMapping({"/",""})
+    @GetMapping({"/", ""})
     public String getJoke(Model model) {
-
         model.addAttribute("joke", service.getJoke());
         return "index";
     }
